@@ -1,11 +1,17 @@
 {
+    "ignorePatterns": ["*/assets/"],
     "env": {
         "mocha": true
     },
     "globals": {
+        "PIXI": true,
         "assert": true,
         "animate": true,
         "sinon": true,
         "extendable": true
+    },
+    "rules": {
+        "func-names": 0,
+        "global-require": 0
     }
 }

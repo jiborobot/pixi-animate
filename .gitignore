@@ -5,3 +5,5 @@
 .publish/
 /coverage
 .DS_Store
+/*.d.ts
+.nyc_output

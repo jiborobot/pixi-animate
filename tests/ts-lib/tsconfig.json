@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "commonjs",
+		"noEmit": true,
+		"lib": ["es2015", "dom"],
+		"declaration": false,
+		"esModuleInterop": true,
+		"baseUrl": "./",
+		"paths": {
+			"mini-signals": [
+				"../../node_modules/resource-loader/typings/mini-signals.d.ts"
+			]
+		},
+	},
+	"include": [
+		"index.ts"
+	]
+}

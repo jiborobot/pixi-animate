@@ -1,10 +1,38 @@
-describe('Graphics', function() {
-    it('should have shortened names', function() {
-        var p = PIXI.Graphics.prototype;
+const { Graphics } = require('../..');
+
+describe('Graphics', function ()
+{
+    it('should have DisplayObject shortened names', function ()
+    {
+        const p = new Graphics();
+
+        assert.isOk(p.setRenderable);
+        assert.isOk(p.re);
+        assert.equal(p.setRenderable, p.re);
+        assert.isOk(p.t);
+        assert.equal(p.setTransform, p.t);
+        assert.isOk(p.ma);
+        assert.isOk(p.setMask);
+        assert.equal(p.setMask, p.ma);
+        assert.isOk(p.a);
+        assert.isOk(p.setAlpha);
+        assert.equal(p.setAlpha, p.a);
+        assert.isOk(p.i);
+        assert.isOk(p.setTint);
+        assert.equal(p.setTint, p.i);
+        // NOTE: on Graphics, c() wraps setColorTransform so that we can override it in the shim
+        assert.isOk(p.c);
+        assert.isOk(p.setColorTransform);
+        // assert.equal(p.setColorTransform, p.c);
+    });
+    it('should have shortened names', function ()
+    {
+        const p = new Graphics();
+
         assert.isOk(p.drawCommands);
         assert.isOk(p.d);
         assert.equal(p.drawCommands, p.d);
-        assert.equal(p.c, p.closePath);
+        assert.equal(p.cp, p.closePath);
         assert.equal(p.h, p.addHole);
         assert.equal(p.m, p.moveTo);
         assert.equal(p.l, p.lineTo);

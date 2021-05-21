@@ -1,5 +1,9 @@
-describe('Tween', function() {
-    it('should exist', function() {
-        assert.isOk(PIXI.animate.Tween);
+const animate = require('../..');
+
+describe('Tween', function ()
+{
+    it('should exist', function ()
+    {
+        assert.isOk(animate.Tween);
     });
 });
